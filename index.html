@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 25.8.4.2 (Linux)"/>
+	<meta name="created" content="00:00:00"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 8.27in 11.69in; margin: 0.79in }
+		p { margin-bottom: 0.1in; line-height: 115%; background: transparent }
+		pre { font-size: 10pt; font-family: "Liberation Mono", monospace; background: transparent }
+	</style>
+</head>
+<body lang="en-US" link="#000080" vlink="#800000" dir="ltr"><pre>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;For Farah ❤️&lt;/title&gt;
+
+&lt;style&gt;
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+  overflow: hidden;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  border: none;
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#yes { background: #ff4d6d; color: white; font-size: 22px; }
+#no { background: rgba(255,255,255,0.3); color: white; font-size: 18px; }
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* hearts */
+.heart {
+  position: absolute;
+  font-size: 20px;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  from { transform: translateY(100vh); opacity: 0; }
+  50% { opacity: 1; }
+  to { transform: translateY(-10vh); opacity: 0; }
+}
+
+/* final scene */
+.scene {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.big {
+  font-size: 42px;
+  animation: pulse 1s infinite alternate;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
+}
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;div id=&quot;app&quot; class=&quot;container&quot;&gt;
+  &lt;h1&gt;Farah Alsibai 🥺💖&lt;/h1&gt;
+  &lt;p&gt;I know you're upset with me...&lt;/p&gt;
+  &lt;p&gt;But can I ask you something from my heart?&lt;/p&gt;
+
+  &lt;button id=&quot;yes&quot; onclick=&quot;firstYes()&quot;&gt;Yes 💕&lt;/button&gt;
+  &lt;button id=&quot;no&quot; onclick=&quot;shrinkNo()&quot;&gt;No 😢&lt;/button&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+
+let yesSize = 22;
+let noSize = 18;
+
+/* SHRINK + MOVE NO */
+function shrinkNo() {
+  const noBtn = document.getElementById(&quot;no&quot;);
+
+  if (noSize &gt; 6) {
+    noSize -= 2;
+    yesSize += 4;
+
+    noBtn.style.fontSize = noSize + &quot;px&quot;;
+    document.getElementById(&quot;yes&quot;).style.fontSize = yesSize + &quot;px&quot;;
+  }
+
+  noBtn.style.position = &quot;absolute&quot;;
+  noBtn.style.left = Math.random() * 80 + &quot;vw&quot;;
+  noBtn.style.top = Math.random() * 80 + &quot;vh&quot;;
+}
+
+/* STEP 1 */
+function firstYes() {
+  document.getElementById(&quot;app&quot;).innerHTML = `
+    &lt;h2&gt;Thank you for giving me a chance 💖&lt;/h2&gt;
+    &lt;p&gt;I know I hurt you... and I'm really sorry.&lt;/p&gt;
+    &lt;p&gt;I didn’t treat you the way you deserved.&lt;/p&gt;
+    &lt;p&gt;And I regret that more than anything.&lt;/p&gt;
+    &lt;p&gt;Can I ask you something honestly?&lt;/p&gt;
+    &lt;button onclick=&quot;memoryStep()&quot;&gt;Okay...&lt;/button&gt;
+    &lt;button onclick=&quot;secondNo()&quot;&gt;No&lt;/button&gt;
+  `;
+}
+
+/* MEMORY STEP */
+function memoryStep() {
+  document.getElementById(&quot;app&quot;).innerHTML = `
+    &lt;h2&gt;Just think for a second 🤍&lt;/h2&gt;
+    &lt;p&gt;Think about our moments...&lt;/p&gt;
+    &lt;p&gt;The laughs, the talks, the little things.&lt;/p&gt;
+    &lt;p&gt;Do they still mean something to you?&lt;/p&gt;
+    &lt;button onclick=&quot;middleStep()&quot;&gt;Yes...&lt;/button&gt;
+    &lt;button onclick=&quot;secondNo()&quot;&gt;No&lt;/button&gt;
+  `;
+}
+
+/* FEELING STEP */
+function middleStep() {
+  document.getElementById(&quot;app&quot;).innerHTML = `
+    &lt;h2&gt;Be honest with me 🥺&lt;/h2&gt;
+    &lt;p&gt;Do you still feel something for me... even a little?&lt;/p&gt;
+    &lt;button onclick=&quot;secondYes()&quot;&gt;Yes...&lt;/button&gt;
+    &lt;button onclick=&quot;secondNo()&quot;&gt;No&lt;/button&gt;
+  `;
+}
+
+/* STEP 2 YES */
+function secondYes() {
+  document.getElementById(&quot;app&quot;).innerHTML = `
+    &lt;h2&gt;That means everything to me 💖&lt;/h2&gt;
+    &lt;p&gt;I don’t want to lose you.&lt;/p&gt;
+    &lt;p&gt;I want to do things right this time.&lt;/p&gt;
+    &lt;p&gt;I’ll listen more, care more, and actually show it.&lt;/p&gt;
+    &lt;p&gt;Not just words… real actions.&lt;/p&gt;
+    &lt;p&gt;Will you give us another chance? 💔➡️❤️&lt;/p&gt;
+
+    &lt;button onclick=&quot;finalScene()&quot;&gt;Yes… one more chance ❤️&lt;/button&gt;
+  `;
+}
+
+/* STEP NO LOOP */
+function secondNo() {
+  document.getElementById(&quot;app&quot;).innerHTML = `
+    &lt;h2&gt;😔&lt;/h2&gt;
+    &lt;p&gt;I understand... I really do.&lt;/p&gt;
+    &lt;p&gt;But if there’s even 1% chance…&lt;/p&gt;
+    &lt;p&gt;Please don’t give up on us completely.&lt;/p&gt;
+    &lt;button onclick=&quot;memoryStep()&quot;&gt;Just think once more...&lt;/button&gt;
+  `;
+}
+
+/* FINAL SCENE */
+function finalScene() {
+  document.body.innerHTML = `
+    &lt;div class=&quot;scene&quot;&gt;
+      &lt;div class=&quot;big&quot;&gt;💖 Thank You 💖&lt;/div&gt;
+      &lt;p&gt;I won’t take you for granted again.&lt;/p&gt;
+      &lt;p&gt;This time… I’ll prove it.&lt;/p&gt;
+      &lt;br&gt;
+      &lt;p&gt;&lt;strong&gt;I love you.&lt;/strong&gt;&lt;/p&gt;
+      &lt;p&gt;I will always be in love with you.&lt;/p&gt;
+      &lt;p&gt;No one can come into my life other than you.&lt;/p&gt;
+    &lt;/div&gt;
+  `;
+}
+
+/* HEARTS */
+function createHeart() {
+  const heart = document.createElement(&quot;div&quot;);
+  heart.classList.add(&quot;heart&quot;);
+  heart.innerText = &quot;💖&quot;;
+
+  heart.style.left = Math.random() * 100 + &quot;vw&quot;;
+  heart.style.fontSize = (Math.random() * 20 + 10) + &quot;px&quot;;
+
+  document.body.appendChild(heart);
+
+  setTimeout(() =&gt; heart.remove(), 6000);
+}
+
+setInterval(createHeart, 300);
+
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+</body>
+</html>
